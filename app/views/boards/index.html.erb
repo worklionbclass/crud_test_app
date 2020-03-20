@@ -1,0 +1,13 @@
+<a href="/boards/new">새 글 쓰기</a>
+
+<br>
+
+<% @boards.each do |board| %>
+    title : <%= board.title %>
+    content : <%= board.content %>
+    <a href="/boards/show/<%= board.id %>">보러가기</a>
+    <a href="/boards/edit/<%= board.id %>">수정하기</a>
+    <a href="/boards/destroy/<%= board.id %>">삭제하기</a>
+    <hr/>
+<% end %>
+
